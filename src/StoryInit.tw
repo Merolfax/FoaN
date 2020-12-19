@@ -1,0 +1,32 @@
+::StoryInit
+
+<<set $player = {
+	name: "August",
+	ape: "von",
+	surname: "Clausewitz",
+	milmind: 0,
+	weaponry: 0,
+	socmind: 0,
+	status: 0,
+}>>
+
+<<set $history = {
+	birth = "none",
+	childhood = "none",
+	schooling = "none",
+	politics = "none",
+	goals = "none",
+	reason = "none",
+}>>
+
+<<set $opinion = {
+	king: 0,
+	court: 0,
+	bureaucracy: 0,
+	fascist: 0,
+	officer: 0,
+	soldier: 0,
+	middle: 0,
+	worker: 0,
+	peasant: 0,
+}>>

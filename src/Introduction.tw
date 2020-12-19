@@ -1,0 +1,49 @@
+::StoryTitle
+Fate of a Nation
+
+:: StoryData
+{
+	"ifid": "6BAE35E0-51A1-48DD-AA0D-4A9C4640125B"
+}
+
+::Start
+
+The country of Cossan is one with a rich and storied one. Composed of mostly fertile flatlands and forests, it has managed to keep its independence throughout the age of multinational empires, and into the era of nation-states. However, this peace came at a cost. Stagnation is everywhere, from fashion, to food, to political institutions. The monarchy still acts as if this is the age of reason, and tries to be enlightened despots. The latest of these monarchs from the house of Czarniecki, Fryderyk IV is a gentle soul, but one that did not relinquish his authority, even in the face of popular unrest. His inability in politics combined with the stubborness slowly eroded his support among everyone, even moderate monarchists. After a petition was refused on the grounds of "Nonsensical Content" the people arose, and parts of the miltary defected, the country fell into a civil war. Now, the rebels are advancing towards the gates of the capital, Neftedar, and only you can stop it. You are the Lord-Marshal of Neftedar, penultimate miltary authority in the capital, and you have one month to decide the fate of this nation. 
+
+But first, who are you really?
+
+[[I am...|cchar]]
+
+::cchar
+
+First things first, your name is:
+<<textbox "$player.name" "">>
+
+And your surname is:
+<<textbox "$player.surname" "">>
+
+Let's see if you have a nobilary particle...
+<<listbox "$player.ape">>
+	<<option "(none)" "">>
+	<<option "von">>
+	<<option "zu">>
+	<<option "de">>
+	<<option "du">>
+	<<option "d'">>
+	<<option "of">>
+	<<option "Al">>
+<</listbox>>
+
+Remenver your childhood, if you'd please. There is a reason you're in the position you are now, and it'd do good to remember it.
+
+[[Continue|cchar2]]
+
+::cchar2
+
+What sort of family were you born in?
+
+[[I was born in a peasant family in the western region of the country. I can still remember the smell of manure, and the work of harvest|cchar3p][$history.birth to "peasant", $opinion.peasant to += 10]]
+[[I was born in Neftedar, the 4th child of a worker family. My family was often absent, leaving me with my siblings|cchar3w][$history.birth to "worker", $opinion.worker to += 10]]
+[[I was born in a small town, as the child of an artisan. You helped your father with his work. You still know how to distinguish good quality iron from bad quality ones|cchar3a][$history.birth to "artisan", $opinion.worker to += 5, $opinion.middle to += 5]]
+[[I was born in Prykove, teh 2nd largest city, and a port town. Father was a trader, and a successful one at that. We lived comfortably enough at least|cchar3m][$history.birth to "middle"]]
+[[I was born in a noble household in Neftedar, as the 2nd child of the family. We entertained the king in our townhouse a few times even|cchar3n][$history.birth to "noble", $opinion.noble to += 5, $opinion.royal to += 5]]
